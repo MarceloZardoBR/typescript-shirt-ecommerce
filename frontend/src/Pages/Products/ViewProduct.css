@@ -1,0 +1,136 @@
+.main-view-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.return-arrow-ctn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    width: 60%;
+    height: 40px;
+}
+
+.return-arrow-ctn p{
+    font-size: 23px;
+    color: #000;
+    font-weight: bold;
+}
+
+.return-arrow-ctn button{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.view-prd-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    width: 60%;
+    height: 60%;
+    border: 1px;
+    -webkit-box-shadow: 0px 3px 10px 2px #000;
+    -moz-box-shadow: 0px 3px 10px 2px #000;
+    box-shadow: 0px 3px 10px 2px #000;
+}
+
+.view-prd-container img{
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 0;
+    margin: 10px;
+}
+
+.desc-prd-container{
+    display: flex;
+    width: 50%;
+    height: 300px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.desc-prd-container p{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+.desc-prd-container footer{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+.desc-prd-container footer p{
+    font-size: 20px;
+    color: #666;
+}
+
+.desc-prd-container button{
+    height: 30px;
+    width: 40%;
+    color: #FFF;
+    background-color: #000;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+    .view-prd-container img{
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .desc-prd-container{
+        width: 300px;
+        height: 200px;
+    }
+
+    .desc-prd-container button{
+        width: 100px;
+        height: 40px;
+    }
+}
+
+@media (max-height: 370px){
+    .view-prd-container{
+        width: 60%;
+    }
+
+    .view-prd-container img{
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .desc-prd-container{
+        width: 300px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 550px){
+    .view-prd-container{
+        margin: 10px 10px 0px 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 500px;
+    }
+
+    .desc-prd-container{
+        justify-content: flex-start;
+    }
+}
