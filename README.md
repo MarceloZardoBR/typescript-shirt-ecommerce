@@ -17,7 +17,7 @@ Simple t-shirt store developed to practice typescript with backend and frontend,
 
 1 - First Clone the repository
 
-2 - You will need to have MongoDB in you machine or ina docker..
+2 - You will need to have MongoDB in you machine or in a docker..
 
 3 - Run "yarn dev:server" for backend and "yarn start"
 
