@@ -1,4 +1,4 @@
-# typescript-shirt-store
+# Typescript TShirt Store
 
 Simple t-shirt store developed to practice typescript with backend and frontend, you can clone if you want to test or improve for your own use :)
 
