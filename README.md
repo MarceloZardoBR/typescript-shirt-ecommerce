@@ -1,6 +1,8 @@
-# typescript-shirt-commerce
+# typescript-shirt-store
 
 Simple t-shirt store developed to practice typescript with backend and frontend, you can clone if you want to test or improve for your own use :)
+
+![Preview Main](/frontend/exampleImages/main-page.png)
 
 ## Technologies Used
 
@@ -17,12 +19,7 @@ Simple t-shirt store developed to practice typescript with backend and frontend,
 
 2 - You will need to have MongoDB in you machine or ina docker..
 
-3 - You need to create the products data for test, follow the entity below: (backend/src/models/products.ts)
-
-	- name: String,
-    - photo: String,
-    - price: String,
-    - size: String,
+3 - Run "yarn dev:server" for backend and "yarn start"
 
 ## Developed By
 
