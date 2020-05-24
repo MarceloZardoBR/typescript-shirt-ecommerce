@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState, FormEvent, ChangeEvent } from 'react';
+import React, { useEffect, useState, FormEvent, ChangeEvent, FC } from 'react';
 import { RouteComponentProps } from "react-router";
 import axios from 'axios';
 import { BASE_URL } from '../commons/baseURL';
+import LoginLogo from '../assets/imgs/login-logo.png'
 
 import './Login.css';
 
@@ -12,11 +13,17 @@ interface IUser {
     password: string,
 }
 
-const Login: React.FC<RouteComponentProps> = (props) => {
+interface OwnProps {
+    message?: string
+}
+
+
+const Login: React.FC<RouteComponentProps<OwnProps>> = (props) => {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const token = localStorage.getItem('token');
+    const message: string = props.match.params.message!;
 
     useEffect(() => {
         if (token) {
@@ -28,6 +35,7 @@ const Login: React.FC<RouteComponentProps> = (props) => {
                 props.history.push(`/main/`);
             })
         }
+        console.log(message);
         return
     }, [])
 
@@ -48,7 +56,7 @@ const Login: React.FC<RouteComponentProps> = (props) => {
                     const { id, token } = res.data;
                     localStorage.setItem('token', token);
 
-                    props.history.push(`/main/:${id}`);
+                    props.history.push(`/`);
                 }
             })
     }
@@ -67,7 +75,13 @@ const Login: React.FC<RouteComponentProps> = (props) => {
 
     return (
         <div className="login-container">
+            {message ? (
+                    <p>{message}</p>
+                ) : (
+                    <></>
+                )}
             <div className="login-form-container">
+                <img src={LoginLogo} />
                 <form onSubmit={onHandleSubmit}>
                     <input placeholder='Email' value={email} onChange={onChangeEmail} />
                     <input type='password' placeholder='Senha' value={password} onChange={onChangePassword} />

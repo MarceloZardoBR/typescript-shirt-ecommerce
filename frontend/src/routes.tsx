@@ -21,9 +21,9 @@ class Routes extends React.Component<RouteComponentProps> {
     render() {
         return (
             <BrowserRouter>
-                <Route path='/' exact component={Login} />
+                <Route path='/' exact component={Main} />
+                <Route path='/user/login' component={Login} />
                 <Route path='/user/create' component={Register} />
-                <Route path='/main/' component={Main} />
                 <Route path='/user/profile/' component={Profile} />
                 <Route path='/user/edit/' component={EditProfile} />
                 <Route path='/user/cart/' component={CartCheckout} />

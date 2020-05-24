@@ -29,7 +29,7 @@ const Register: React.FC<RouteComponentProps & Props> = (props, { onHandleCancel
     onHandleSubmit = (values:Values) =>{
         if(createUser(values)){
             const message:string = 'Conta Criada com Sucesso';
-            props.history.push('/', { message })
+            props.history.push('/user/login', message)
         }
         
     }

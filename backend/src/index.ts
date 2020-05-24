@@ -9,7 +9,7 @@ app.listen(3333);
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/tshirt-store',{
+mongoose.connect('mongodb+srv://mzardo:mzardo@cluster0-lmor3.mongodb.net/tshirt-store?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,

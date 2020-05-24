@@ -11,7 +11,6 @@ import { useDispatch } from 'react-redux';
 import user from '../assets/imgs/user-icon.svg';
 import cart from '../assets/imgs/cart-icon.svg';
 import search from '../assets/imgs/search-icon.svg';
-import { IProduct } from '../commons/types';
 import { IUser } from '../commons/types';
 import { Dispatch } from 'redux';
 import { searchedProducts } from '../store/searchProducts/actions';

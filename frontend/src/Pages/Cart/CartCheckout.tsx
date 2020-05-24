@@ -32,6 +32,12 @@ const CartCheckout: React.FC<RouteComponentProps> = ({ history }) => {
     }
 
     useEffect(() => {
+        if(!token){
+            history.push('/user/login');
+        }
+    },[])
+
+    useEffect(() => {
         getUserCart();
     }, []);
 

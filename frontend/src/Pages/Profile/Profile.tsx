@@ -26,7 +26,7 @@ const Profile: React.FC<RouteChildrenProps> = ({ history }) => {
                 }
             });
         }else{
-            history.push('/');
+            history.push('/user/login');
         }
     },[history, token])
 
@@ -45,7 +45,7 @@ const Profile: React.FC<RouteChildrenProps> = ({ history }) => {
     const onHandleLogout = async () =>{
         await localStorage.removeItem('token');
 
-        history.push('/');
+        history.push('/user/login');
     }
 
     return (

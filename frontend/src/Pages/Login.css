@@ -3,6 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.login-container p{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
 }
 
 .login-form-container{
@@ -14,10 +21,16 @@
     flex-direction: column;
 }
 
+.login-form-container img{
+    max-width: 130px;
+    max-height: 130px;
+}
+
 .login-form-container form{
     width: 90%;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .login-form-container form input{
